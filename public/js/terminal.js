@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     const terminalLines = document.querySelectorAll(".loadingText");
     const terminal = document.querySelector(".terminal");
 
@@ -28,5 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     terminalLines.forEach(line => line.style.opacity = "0");
-    showLines();
+    await showLines();
+    setTimeout(() => {
+        window.location.href = "planet";
+    }, 8000);
 });
