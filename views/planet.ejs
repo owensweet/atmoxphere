@@ -1,11 +1,20 @@
 <%- include ("templates/header") %>
-<script type="module" src="/js/planet.js"></script>
+<script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
 
 <header>
-    <h1>Ignosa</h1>
+    <h1>{ Ignosa }</h1>
 </header>
 
 <main>
     <div id="container3D"></div>
 </main>
+
+<script type="module" src="/js/planet.js"></script>
 <%- include ("templates/footer") %>

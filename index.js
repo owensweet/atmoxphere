@@ -10,8 +10,7 @@ app.use(express.static("public"));
 app.use("/js", express.static("./public/js"));
 app.use("/css", express.static("./public/css"));
 app.use("/images", express.static("./public/images"));
-app.use("/three", express.static(__dirname + "/node_modules/three/build/"));
-app.use("/three/examples", express.static(__dirname + "/node_modules/three/examples/"));
+app.use("/three", express.static("./node_modules/three"));
 
 
 app.get('/', (req, res) => {

@@ -1,0 +1,8 @@
+-add atmosphere blueish glow
+
+-momentum based rotation
+
+-add the 2d widgets so they float around with lines connected and have some
+cool physics involved
+
+-make the model load while the terminal is doing its thing!! (maybe later depending on how the site is structured)
