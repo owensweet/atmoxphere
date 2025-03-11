@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+// import vertexShade from '../shaders/vertex.glsl'
 
 
 const scene = new THREE.Scene();
@@ -42,8 +43,13 @@ loader.load(
     }
 );
 
-const renderer = new THREE.WebGLRenderer({ alpha: true }); //alpha for transparent background
+const renderer = new THREE.WebGLRenderer(
+    {
+        alpha: true, //alpha for transparent background 
+        antiAlias: true
+    }); 
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
 
 //Set camera position
 camera.position.z = objToRender == 35
@@ -53,13 +59,13 @@ camera.position.set(0, 0, 5)
 controls = new OrbitControls(camera, renderer.domElement)
 controls.enableZoom = false;
 controls.enablePan = false;
-controls.enableRotate = false;
+controls.enableRotate = true;
 
 document.getElementById("container3D").appendChild(renderer.domElement);
 
 
 //Setting up the lights
-const topLight = new THREE.DirectionalLight(0xffffff, 1);
+const topLight = new THREE.DirectionalLight(0xffffff, 7);
 topLight.position.set(500, 500, 500);
 topLight.castShadow = true;
 scene.add(topLight);
@@ -67,12 +73,13 @@ scene.add(topLight);
 const ambientLight = new THREE.AmbientLight(0x333333, 20);
 scene.add(ambientLight);
 
+
 //Physics functions
 function animate() {
     requestAnimationFrame(animate);
 
     if (objectGroup) {
-        objectGroup.rotation.y += 0.01;
+        objectGroup.rotation.y += 0.005;
     }
 
     controls.update()

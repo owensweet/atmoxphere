@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Kode mono', monospace;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 5px #38e08a;
+    background-color: black;
+    background-image: url(/images/nebula.jpg);
+    --webkit-transform: rotate(120deg);
+    background-size:400%;
+    background-repeat: no-repeat;
+}
+
+header {
+    text-align: center;
+    font-size: 27px;
+    margin-top: 3em;
+    color: white;
+}
+
+#container3D canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

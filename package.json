@@ -28,6 +28,7 @@
   "homepage": "https://github.com/owensweet/atmoxphere#readme",
   "description": "",
   "devDependencies": {
-    "vite": "^6.2.1"
+    "vite": "^6.2.1",
+    "vite-plugin-string": "^1.2.3"
   }
 }
