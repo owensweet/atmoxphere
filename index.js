@@ -23,6 +23,11 @@ app.get("/planet", (req, res) => {
     res.render("planet");
 });
 
+app.get("/shop", (req, res) => {
+
+    res.render("shop");
+});
+
 app.listen(port, () => {
     console.log("Node application listening on port " + port);
 });

@@ -1,3 +1,6 @@
+add language button to translate from en/japanese
+
+**Planet page**
 -add atmosphere blueish glow
 
 -momentum based rotation
@@ -6,3 +9,7 @@
 cool physics involved
 
 -make the model load while the terminal is doing its thing!! (maybe later depending on how the site is structured)
+
+**Shop page**
+
+-design shop page to display clothing items
